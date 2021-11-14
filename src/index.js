@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import RouterConfig from './router_config'
-
-
+import { Provider } from 'react-redux';
+import store from './redux/store'
+//npm install --save-dev redux-devtools-extension
+//npm i --save redux-logger
 ReactDOM.render(
   <React.StrictMode>
+     <Provider store={store}>
+     <RouterConfig />
+    </Provider>
     
-    <RouterConfig />
    
   </React.StrictMode>,
   document.getElementById('root')
