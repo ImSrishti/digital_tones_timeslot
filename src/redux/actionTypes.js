@@ -1,1 +1,2 @@
-export const TIMESLOTS = "TIMESLOTS";
+export const BOOK = "BOOK";
+export const EDIT = "EDIT";

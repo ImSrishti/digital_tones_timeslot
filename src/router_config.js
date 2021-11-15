@@ -10,7 +10,7 @@ const Router_config = () => {
         <Router> {/*switch is replaced and instead of children ele*/}
         <Routes>
             <Route path="/" exact element={<App />}></Route>
-            <Route path="/edit" element={<EditDetails />}></Route>
+            <Route path="/edit/:id" element={<EditDetails />}></Route>
         </Routes>
         </Router>
     )
