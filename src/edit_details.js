@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
-import { Navigate } from "react-router-dom";
+import React from 'react'
+import { Link } from "react-router-dom";
 import { Form,Button,Row,Col } from 'react-bootstrap';
 const Edit_details = () => {
-    const [redirect, setRedirect] = useState(false)
     return (
         <div>
 
             
-            {redirect ? <Navigate to='/' /> : null}
+            
             <Form>
                 <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
                     <Form.Label column sm={2}>
@@ -32,8 +31,8 @@ const Edit_details = () => {
                 <Form.Group as={Row} className="mb-3">
                    
                     <Col sm={{ span: 10, offset: 2 }} >
-                        <Button type="submit" onClick={() => setRedirect(true)} style={{margin:'6px'}}>Okay</Button>
-                        <Button type="button" onClick={() => setRedirect(true)}>Cancel</Button>
+                    <Link style={{ textDecoration: 'none' }} to='/'>  <Button type="submit" style={{margin:'6px'}}>Okay</Button></Link>
+                        <Link style={{ textDecoration: 'none' }} to='/'>    <Button type="button" >Cancel</Button></Link>
                     </Col>
                 
                 </Form.Group>
